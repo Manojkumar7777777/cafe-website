@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar .nav-link .nav-menu{
+            color: var(--white-color);
+        }
+        .navbar .logo .logo-text{
+            color: rgb(227, 21, 21);
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar{
+            color: var(--white-color);
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top: -20px;
+            margin-right: 150px;
+            position: fixed;
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            z-index: 5;
+        }
+        .navbar .nav-menu{
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            margin-right: 300px;
+        }
+        .navbar .nav-menu .nav-link{
+            padding: 10px 18px ;
+            color: white;
+            border-radius: 100px;
+            font-size: 15px;
+            transition: 0.3 ease;
+        }
+        .navbar .nav-menu .nav-link:hover{
+            color: aliceblue;
+            background-color: rgb(166, 4, 4);
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        .logo-text{
+            margin-left: 200px;
+        }
+
+        .menu-section .menu-list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            text-align: center;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        .menu-section .menu-list .menu-item{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            width: calc(100% /3 - 60px);
+            margin-top: 40px;
+        }
+        .menu-section{
+            background: black;
+            color: white;
+            padding: 50px 0 100px;
+            
+        }
+        .menu-section .menu-list .menu-item .menu-image{
+            max-width: 50%;
+            aspect-ratio: -1;
+            margin-top: -30px;
+            
+            object-fit: contain;
+            margin-top: 30px;
+            transition: 0.3 ease;
+        }
+        .menu-section .menu-list .menu-item .menu-image:hover{
+            background: black;
+            
+            border-radius: 150px;
+        }
+        .menu-section .menu-list .menu-item .name{
+            margin: 12px 0;
+            font-size: 25px;
+            font-weight: 200;
+            color: white;
+            margin-top: 5px;
+        }
+        
+        .menu-item{
+            background: red;
+            border-radius: 50px;
+            padding: 10px 0 30px;
+            height: 350px;
+            width: 350px;
+            gap: -10px;
+            
+            
+
+        }
+
+        
+        .button-order{
+            background: black;
+            font-size: 15px;
+           
+           
+            font-weight: 300;
+            color: white;
+            padding: 10px;
+            transition: 0.3 ease;
+            border-radius: 100px;
+
+        }
+        .section-text{
+            margin-top: 50px;
+        }
+        .button-order:hover{
+            background: red;
+            color: white;
+
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .Go-back{
+            font-size: 20px;
+            background: white;
+            color: black;
+            padding: 10px;
+            border-radius: 150px;
+            text-align: text;
+        }
+        .cart-summary {
+            color: white;
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            border-radius: 10px;
+            z-index: 10;
+        }
+       
+       
+    
+        
+
+
+
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="cart-summary">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Bill: $<span id="total-bill">0</span></p>
+    </div>
+
+    <section class="menu-section" id="menu">
+        <h2 class="section-text" style="color: red; text-align: center; font-size: 30px;" ><a href="#menu">COFFEE MENU</a></h2>
+        
+        <!-- Back to mainpage.html -->
+        <a href="mainpage.html" class="Go-back" >Go Back</a>
+           <div class="section-content">
+               <ul class="menu-list">
+                   <li class="menu-item">
+                       <img src="https://png.pngtree.com/png-clipart/20221109/ourmid/pngtree-fresh-milk-tea-or-indian-kadak-chai-png-image_6432496.png" alt="coffee1" class="menu-image">
+                       <h2 class="name" >Tea<br>10$</h2>
+
+                       <button class="button-order" data-price="10">Add Cart</button>
+                       
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://www.transparentpng.com/thumb/coffee/ua5Ryq-coffee-photos.png"  alt="coldcoffee" class="menu-image">
+                       <h3 class="name"> Coffee<br>15$</h3>
+                       <button class="button-order" data-price="15">Add Cart</button>
+                       
+
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://static.vecteezy.com/system/resources/thumbnails/037/280/541/small_2x/ai-generated-black-tea-held-in-a-glass-isolated-on-transparent-background-free-png.png" alt="Milkshake" class="menu-image">
+                       <h3 class="name">Black Tea<br>15$</h3>
+                       <button class="button-order" data-price="15">Add Cart</button>
+
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://png.pngtree.com/png-vector/20240412/ourmid/pngtree-lemon-tea-in-a-mug-on-saucer-png-image_12281659.png" alt="burger" class="menu-image">
+                       <h3 class="name">Lemon tea<br>20$</h3>
+                       <button class="button-order" data-price="20">Add Cart</button>
+                    </li>
+                   <li class="menu-item">
+                       <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_609cbfeda697bb1299ac7f83d776e145.webp" alt="pizza" class="menu-image">
+                       <h3 class="name">Boost<br>25$</h3>
+                       <button class="button-order" data-price="25">Add Cart</button>
+                    </li>
+                   <li class="menu-item">
+                       <img src="https://static.vecteezy.com/system/resources/previews/024/108/075/non_2x/fresh-herbal-tea-cup-with-green-leaves-isolated-on-transparent-background-png.png" alt="juice" class="menu-image">
+                       <h3 class="name">Green Tea<br>20$</h3>
+                       <button class="button-order" data-price="20">Add Cart</button>
+                       
+
+                   </li>
+                  
+               </ul>
+
+           </div>
+       </section>
+       <section class="menu-section" id="menu">
+        <h2 class="section-text" style="color: red; text-align: center; font-size: 30px;" ><a href="#menu">PIZZA MENU</a></h2>
+           <div class="section-content">
+               <ul class="menu-list">
+                   <li class="menu-item">
+                       <img src="https://png.pngtree.com/png-clipart/20230412/original/pngtree-modern-kitchen-food-boxed-cheese-lunch-pizza-png-image_9048155.png" alt="coffee1" class="menu-image">
+                       <h2 class="name">Veg pizza<br>150$</h2>
+
+                       <button class="button-order" data-price="150">Add Cart</button>
+                       
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://pngimg.com/uploads/pizza/pizza_PNG43985.png"  alt="coldcoffee" class="menu-image">
+                       <h3 class="name"> Spicy Pizza<br>255$</h3>
+                       <button class="button-order" data-price="255">Add Cart</button>
+                       
+
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://static.vecteezy.com/system/resources/thumbnails/045/383/391/small/a-cheesy-delicious-pizza-with-tasty-pepperoni-on-a-transparent-background-png.png" alt="Milkshake" class="menu-image">
+                       <h3 class="name">Italian pizza<br>305$</h3>
+                       <button class="button-order" data-price="305">Add Cart</button>
+
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://png.pngtree.com/png-clipart/20231003/original/pngtree-pizza-pizza-png-pizza-ai-generated-png-image_13245850.png" alt="burger" class="menu-image">
+                       <h3 class="name">cheese Pizza<br>250$</h3>
+                       <button class="button-order" data-price="250">Add Cart</button>
+                    </li>
+                   <li class="menu-item">
+                       <img src="https://i.pinimg.com/originals/04/88/32/04883229aaa10693e1966b39142ad4a9.png" alt="pizza" class="menu-image">
+                       <h3 class="name">Chicken Pizza<br>275$</h3>
+                       <button class="button-order" data-price="275">Add Cart</button>
+                    </li>
+                   <li class="menu-item">
+                       <img src="https://png.pngtree.com/png-clipart/20230412/original/pngtree-modern-kitchen-food-boxed-cheese-lunch-pizza-png-image_9048155.png" alt="juice" class="menu-image">
+                       <h3 class="name">Panner Pizza<br>180$</h3>
+                       <button class="button-order" data-price="180">Add Cart</button>
+                       
+
+                   </li>
+                  
+               </ul>
+
+           </div>
+       </section>
+
+       <section class="menu-section" id="menu">
+        <h2 class="section-text" style="color: red; text-align: center; font-size: 30px;" ><a href="#menu">JUICE MENU</a></h2>
+           <div class="section-content">
+               <ul class="menu-list">
+                   <li class="menu-item">
+                       <img src="https://png.pngtree.com/png-clipart/20231019/original/pngtree-pineapple-juice-illustration-in-minimal-style-png-image_13371228.png" alt="coffee1" class="menu-image">
+                       <h2 class="name">Pineapple Juice<br>50$</h2>
+
+                       <button class="button-order" data-price="50">Add Cart</button>
+                       
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://png.pngtree.com/png-vector/20240421/ourmid/pngtree-a-glass-of-mango-juice-splash-with-slice-chunks-png-image_12302693.png"  alt="coldcoffee" class="menu-image">
+                       <h3 class="name"> Mango Juice<br>65$</h3>
+                       <button class="button-order" data-price="65">Add Cart</button>
+                       
+
+                   </li>
+                   <li class="menu-item">
+                       <img src="https://static.vecteezy.com/system/resources/previews/044/570/895/non_2x/fresh-orange-juice-in-a-glass-beside-halved-and-whole-oranges-with-green-leaves-png.png" alt="Milkshake" class="menu-image">
+                       <h3 class="name">Orange Juice<br>50$</h3>
+                       <button class="button-order" data-price="50">Add Cart</button>
+
+                   </li>
+                   
+                  
+               </ul>
+
+           </div>
+       </section>
+
+
+
+       
+       <script src="home.js"></script>
+</body>
+</html>
